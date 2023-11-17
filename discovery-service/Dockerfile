@@ -1,6 +1,9 @@
 FROM amazoncorretto:17-alpine
-RUN mkdir /app
-COPY app.jar /app/app.jar
-WORKDIR /app
+
+ARG JAR_FILE=target/*.jar
+
+COPY ${JAR_FILE} discoveryservice.jar
+
+ENTRYPOINT ["java", "-jar", "/discoveryservice.jar"]
+
 EXPOSE 8761
-ENTRYPOINT ["java", "-jar", "app.jar"]

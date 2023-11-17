@@ -1,8 +1,10 @@
+
 FROM amazoncorretto:17-alpine
-RUN mkdir /app
-COPY app.jar /app/app.jar
-WORKDIR /app
+
+ARG JAR_FILE=target/*.jar
+
+COPY ${JAR_FILE} basketservice.jar
+
+ENTRYPOINT ["java", "-jar", "/basketservice.jar"]
+
 EXPOSE 8003
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
-
