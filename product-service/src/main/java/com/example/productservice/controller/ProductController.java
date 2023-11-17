@@ -28,4 +28,5 @@ public class ProductController {
         log.info("product findbyıd");
         return ResponseEntity.ok(productService.findbyId(productId));
     }
+
 }
