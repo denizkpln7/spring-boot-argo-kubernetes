@@ -19,7 +19,6 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-
     public Product findbyId(Long productId) {
         return productRepository.findById(productId)
                 .orElseThrow(()->new CustomException("Not found by ıd","NOT_FOUND",404));
