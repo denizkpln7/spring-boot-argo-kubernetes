@@ -1,7 +1,8 @@
 package com.example.productservice.controller;
 
-import com.denizkpln.productservice.model.Product;
-import com.denizkpln.productservice.service.ProductService;
+
+import com.example.productservice.model.Product;
+import com.example.productservice.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,9 @@
 package com.example.productservice.service;
 
-import com.denizkpln.productservice.exception.CustomException;
-import com.denizkpln.productservice.model.Product;
-import com.denizkpln.productservice.repository.ProductRepository;
+
+import com.example.productservice.exception.CustomException;
+import com.example.productservice.model.Product;
+import com.example.productservice.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 @Service
