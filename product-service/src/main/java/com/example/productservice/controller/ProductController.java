@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/product")
 @Slf4j
 public class ProductController {
-
     private final ProductService productService;
 
     public ProductController(ProductService productService) {
