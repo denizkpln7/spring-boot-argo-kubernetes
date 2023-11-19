@@ -52,13 +52,13 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.REPO_OWNER }}/${{ matrix.image_name }}
 
-#      - name: Build and push ${{ matrix.image_name }}
-#        uses: docker/build-push-action@v5
-#        with:
-#          context: ${{ matrix.image_name }}
-#          file: ${{ matrix.image_name }}/Dockerfile
-#          push: true
-#          tags: ${{ steps.meta.outputs.tags }}
-#          labels: ${{ steps.meta.outputs.labels }}
-##          secrets: |
-##            GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
+      - name: Build and push ${{ matrix.image_name }}
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ matrix.image_name }}
+          file: ${{ matrix.image_name }}/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+#          secrets: |
+#            GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
